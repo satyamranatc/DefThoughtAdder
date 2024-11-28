@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Site</title>
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+    <nav>
+        <h1>Logo</h1>
+        <ul>
+            <li><a href="./Home.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <div id="Admin">
+        <div class="tab-container">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="signup">Sign Up</button>
+            </div>
+
+            <div class="tab-content">
+                <!-- Login Tab -->
+                <div class="tab-pane active" id="login">
+                    <form id="Login">
+                        <label for="login-username">Username:</label><br>
+                        <input type="text" id="login-username" name="username" required><br>
+                        <label for="login-password">Password:</label><br>
+                        <input type="password" id="login-password" name="password" required><br>
+                        <input type="submit" value="Login">
+                    </form>
+                </div>
+
+                <!-- Sign Up Tab -->
+                <div class="tab-pane" id="signup">
+                    <form id="SignUp">
+                        <label for="signup-username">Username:</label><br>
+                        <input type="text" id="signup-username" name="username" required><br>
+                        <label for="signup-password">Password:</label><br>
+                        <input type="password" id="signup-password" name="password" required><br>
+                        <input type="submit" value="Sign Up">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="welcomeMessage" class="hidden">
+        Welcome, <span id="userNameDisplay"></span>!
+    </div>
+
+    <main>
+        <section>
+            <input type="text" id="thoughtInput" placeholder="Enter Your Thought...">
+            <button id="addThoughtBtn">Add</button>
+        </section>
+
+        <section id="ThoughtList">
+            <!-- Thoughts will be added here dynamically -->
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
